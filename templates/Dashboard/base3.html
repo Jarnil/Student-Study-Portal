@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+{% load static %}
+{% load crispy_forms_tags %}
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aspiration</title>
+  <link rel="icon" href="{% static 'Dashboard/favicon/favicon.ico' %}">
+
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Ubuntu" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="{% static "Dashboard/css/user_search_styles.css" %}">
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/sign-in/">
+  <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+<body >
+
+  <section id="title">
+    <div class="container-fluid">
+      <nav class="navbar navbar-expand-lg navbar-title navbar-light">
+        <span class="navbar-brand brand-name"><a class="navbar-brand brand-name" href="{% url 'Dashboard:user_index' %}" tabindex="-1" aria-disabled="true">Aspiration</a></span>
+        <div class=" navbar-collapse collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item nav-home-name">
+              <a class="nav-link" href="{% url 'Dashboard:user_index' %}">HOME</a>
+            </li>
+            <li class="nav-item nav-signout-name">
+              <a class="nav-link" href="{% url 'index' %}">SIGN OUT</a>
+            </li>
+            <li class="nav-item nav-profile-name">
+              <a class="nav-link" href="{% url 'Dashboard:profile' %}"><i class="far fa-user-circle fa-2x"></i></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+  </section>
+  {% if messages %}
+    {% for msg in messages %}
+      <div class="alert alert-{{msg.tags}}">{{msg}}</div>
+    {% endfor %}
+  {% endif %}
+  {% block body_block %}
+  <!-- ANYTHING OUTSIDE OF THIS WILL BE INHERITED IF YOU EXTEND!! -->
+  {% endblock %}
+  <!-- <footer class="colored-section" id="footer">
+    <div>
+      <i class="social-icon fab fa-facebook-f"></i>
+      <i class="social-icon fab fa-twitter"></i>
+      <i class="social-icon fab fa-instagram"></i>
+      <i class="social-icon fas fa-envelope"></i>
+      <p>© Copyright 2022 Aspiration</p>
+    </div>
+  </footer> -->
+</body>
+
+</html>

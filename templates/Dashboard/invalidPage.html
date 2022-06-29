@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+{% extends "Dashboard/base1.html" %}
+{% load static %}
+  {% block body_block %}
+    <h3>LOGIN FAILED</h3>
+    <br><br>
+    <h5>USERNAME OR PASSWORD ENTERED ARE INVALID!!</h5>
+    <br><br>
+    <button type="button" class="btn register-button active" role="button" aria-pressed="true"><a class="nav-link" href="{% url 'signin' %}">TRY LOGIN AGAIN</a></button>
+  {% endblock %}

@@ -1,0 +1,172 @@
+body {
+  font-family: "Montserrat";
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Ubuntu";
+}
+
+p {
+  color: #072227;
+}
+
+a {
+  text-decoration: none;
+}
+
+.row {
+  padding:0;
+  margin:0;
+}
+
+.big-heading {
+  font-family: "Ubuntu";
+  font-size: 3rem;
+  line-height: 1.5;
+  color: #1572a1;
+  padding-top: 150px;
+}
+
+.section-heading {
+  font-size: 3rem;
+  line-height: 1.5;
+}
+
+.container-fluid {
+  padding: 7% 15%;
+}
+
+.features {
+  padding: 10%;
+  padding-top: 5%;
+  height: 830px;
+}
+
+.benefits {
+  height: 18.75rem;
+  align-items: center;
+  padding-top: 3%;
+}
+
+.colored-section {
+  background-color: #84DFFF;
+  color: #000;
+}
+
+.white-section {
+  background-color: #fff;
+  color: #000;
+}
+
+.navbar {
+  padding: 0 0 3.5rem 0;
+}
+
+.navbar-brand {
+
+  font-family: "Ubuntu";
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #1572a1;
+}
+
+.nav-item {
+  padding: 0 20px;
+
+}
+
+.nav-link {
+  font-family: "Ubuntu";
+  font-size: 1.1  rem;
+  color: #1572a1;
+}
+
+
+#title {
+  background-color: #fff;
+  color: #000;
+  text-align: left;
+  text-decoration: none;
+}
+
+#title .container-fluid {
+  padding: 3% 15% 7%;
+}
+
+.title-image {
+  width: 100%;
+  position: absolute;
+  margin-left: 2%;
+}
+
+#features {
+  position: relative;
+}
+
+.feature-title {
+  font-size: 1.5rem;
+}
+
+.feature-box {
+  padding: 4.5%;
+}
+
+.pyp {
+  padding-top: 20px;
+}
+
+.uc {
+  padding-top: 12px;
+}
+
+.icon {
+  color: #1572a1;
+  margin-bottom: 1rem;
+}
+
+.icon:hover {
+  color: #9AD0EC;
+}
+
+#testimonials {
+  background-color: #84DFFF;
+  height: 420px;
+}
+
+.testimonial-text {
+  font-size: 3rem;
+  line-height: 1.5;
+  color: #000;
+}
+
+.testimonial-image {
+  width: 10%;
+  border-radius: 100%;
+  margin: 20px;
+}
+
+#footer {
+  padding: 2%;
+  height: 150px;
+}
+
+.social-icon {
+  margin: 20px 10px;
+}
+
+@media (max-width: 1028px) {
+  #title {
+    text-align: center;
+  }
+
+  .title-image {
+    position: static;
+    transform: rotate(0);
+  }
+}

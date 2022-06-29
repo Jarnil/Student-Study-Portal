@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{% extends "Dashboard/base1.html" %}
+{% load static %}
+  {% block body_block %}
+    <main class="form-signup">
+      <div class="jumbotron">
+        {% if registered %}
+          <h1 class="h2 mb-3 fw-normal">THANK YOU FOR REGISTERING!!</h1>
+          <button type="button" class="btn register-button active" role="button" aria-pressed="true"><a class="nav-link" href="{% url 'signin' %}">SIGN IN NOW!!</a></button>
+        {% else %}
+          <h1 class="h3 mb-3 fw-normal">REGISTER HERE!!</h1>
+          <h3 class="h5 mb-3 fw-normal">FILL OUT THE FORM...</h3>
+          <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <table>
+              {{ userForm.as_table }}
+              {{ profileForm.as_table }}
+            </table>
+            <br><br><br>
+            <input class="w-50 btn btn-lg btn-primary" type="submit" value="REGISTER">
+          </form>
+        {% endif %}
+      </div>
+      <div>
+        {% if registered %}
+
+        {% else %}
+          <p>Already have an account?<a href="{% url 'signin' %}"> Sign In Here</a></p>
+        {% endif %}
+      </div>
+    </main>
+  {% endblock %}

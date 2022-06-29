@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css?family=Acme|Lobster|Patua+One|Rubik|Sniglet|Quicksand|Barlow");
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: "Montserrat";
+  text-align: center;
+  max-width: 100%;
+  height: 100%;
+  width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Ubuntu";
+}
+
+p {
+  color: #072227;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.container-fluid {
+  padding: 7% 15%;
+}
+
+.colored-section {
+  background-color: #84DFFF;
+  color: #000;
+}
+
+.brand-name {
+  font-weight: bolder;
+  font-size: 2.5rem;
+  padding-left: 3%;
+}
+
+.nav-profile-name {
+  font-weight: bolder;
+}
+
+.nav-home-name {
+  font-size: 1rem;
+  padding-top: 3%;
+  font-weight: bolder;
+}
+
+.nav-signout-name {
+  font-size: 1rem;
+  padding-top: 3%;
+  font-weight: bolder;
+}
+
+.brand-img-search-tab {
+  padding-bottom: 0.5%;
+}
+
+#title {
+  background-color: #84DFFF;
+  color: #000;
+  text-align: left;
+  text-decoration: none;
+}
+
+#title .container-fluid {
+  padding: 0% 5% 0%;
+}
+
+#footer {
+  padding: 2%;
+  height: 112.5px;
+}
+
+.social-icon {
+  margin: 10px 10px;
+}
+
+.container {
+  padding: 30px;
+  height:100%;
+}
+
+.example::-webkit-scrollbar {
+  display: none;
+}
+
+.card-anchor {
+  color: #1572a1;
+  margin-bottom: 1rem;
+}
+
+.card-anchor:hover {
+  color: #9AD0EC;
+}
+
+.card-img {
+  height:175px;
+}
+
+.card h4 {
+  margin: 40px 40px 0 40px;
+  text-align: left;
+}
+
+.card h6 {
+  margin: 25px 40px 0 40px;
+  text-align: left;
+}
+
+.card p {
+  text-align: right;
+  margin-right: 50px;
+  line-height: 10px;
+}
+
+.card-img:hover {
+  opacity: 0.9;
+  transform: scale(1.02);
+  transition: 0.2s ease;
+}
+
+.col-md-3 .card {
+  width: 100%;
+  height: 100%;
+}
+
+.trashfa {
+    color: black;
+}
+
+.trashfa:hover {
+    color: red;
+
+}

@@ -1,0 +1,28 @@
+{% extends 'Dashboard/base3.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block body_block %}
+  <section class='text-center container container-youtube'>
+  <a href="{% url 'Dashboard:wikipedia' %}"><img src="{% static "Dashboard/images/Logo.png" %}" class="brand-img-search-tab" alt="BRAND LOGO"></a>
+  <form action="" method="post">
+    <table>
+      {{searchForm|crispy}}
+      {% csrf_token %}
+      <input class="btn btn-danger" type="submit" value="Search">
+    </table>
+  </form><br>
+  <div class="container">
+    <div class="content-section p-0 mt-5">
+      <a href="{{wikipediaURL}}" class="p-0 m-0" target="_blank">
+        <div class="custom-header">
+          <h2>{{ wikipediaTitle }}</h2>
+          <h6>{{ wikipediaURL }}</h6>
+        </div>
+      </a>
+      <hr class="p-0 m-0">
+      <p class="description m-5 p-5">{{ wikipediaSummary }}</p>
+      <hr>
+    </div>
+  </div>
+  </section>
+{% endblock body_block %}

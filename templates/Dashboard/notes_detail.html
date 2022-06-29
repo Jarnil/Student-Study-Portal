@@ -1,0 +1,18 @@
+{% extends 'Dashboard/base2.html' %}
+{% load static %}
+{% block body_block %}
+  <section class='text-center container'>
+      <div class="container">
+          <div class="content-section p-0 mt-5">
+              <div class="m-3">
+                  <h2>{{notes.Note_Title}}</h2>
+              </div>
+              <hr class="p-0 m-0">
+              <p class="description m-5 p-5">{{notes.Note_Description}}</p>
+              <hr>
+              <a href="#" style="color:red;"><p class="description m-2 p-2">{{notes.Note_Document}}</p></a>
+              <hr>
+          </div>
+      </div>
+  </section>
+{% endblock body_block %}

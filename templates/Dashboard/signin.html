@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+{% extends "Dashboard/base1.html" %}
+{% load static %}
+  {% block body_block %}
+    {% if tried %}
+      {% if authenticated %}
+
+      {% else %}
+        <main class="form-signin">
+          <div class="jumbotron">
+            <form action="{% url 'signin' %}" method="POST">
+              {% csrf_token %}
+              <h1 class="h3 mb-3 fw-normal">PLEASE LOGIN...</h1>
+              <br>
+              <div class="form-floating">
+                <input type="text" name="userName" class="form-control" id="floatingInput" placeholder="USERNAME">
+              </div>
+              <div class="form-floating">
+                <input type="password" name="userPassword" class="form-control" id="floatingPassword" placeholder="PASSWORD">
+              </div>
+              <p style="color:red;font-size:0.75rem;">Invalid Credentials. Try Again...!!</p>
+              <br>
+              <input class="w-100 btn btn-lg btn-primary" type="submit" value="SIGN IN">
+            </form>
+          </div>
+          <div>
+            <p>Don't have an account?<a href="{% url 'signup' %}">Register Here</a></p>
+          </div>
+        </main>
+      {% endif %}
+    {% else %}
+      <main class="form-signin">
+        <div class="jumbotron">
+          <form action="{% url 'signin' %}" method="POST">
+            {% csrf_token %}
+            <h1 class="h3 mb-3 fw-normal">PLEASE LOGIN...</h1>
+            <br>
+            <div class="form-floating">
+              <input type="text" name="userName" class="form-control" id="floatingInput" placeholder="USERNAME">
+            </div>
+            <div class="form-floating">
+              <input type="password" name="userPassword" class="form-control" id="floatingPassword" placeholder="PASSWORD">
+            </div>
+            <br><br>
+            <input class="w-100 btn btn-lg btn-primary" type="submit" value="SIGN IN">
+          </form>
+        </div>
+        <div>
+          <p>Don't have an account?<a href="{% url 'signup' %}">Register Here</a></p>
+        </div>
+      </main>
+    {% endif %}
+  {% endblock %}
